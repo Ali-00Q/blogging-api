@@ -12,8 +12,8 @@ const postSchema = new mongoose.Schema(
     },
 
     {
-        timeseries: true
+        timestamps: true
     }
 );
 
-module.exports = monggose.model("Post", postSchema);
+module.exports = mongoose.model("Post", postSchema);
