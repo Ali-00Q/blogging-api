@@ -5,4 +5,7 @@ app.use(express.json());
 const authRoutes = require("./routes/authRoutes");
 app.use("/auth", authRoutes);
 
+const postRoutes = require("./routes/postRoutes");
+app.use("/posts", postRoutes);
+
 module.exports = app;
