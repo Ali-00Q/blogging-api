@@ -1,6 +1,0 @@
-name: Local
-values:
-  - key: postId
-    value: ''
-  - key: token
-    value: ''
