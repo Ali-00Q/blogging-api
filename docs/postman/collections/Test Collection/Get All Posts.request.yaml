@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get All Posts
+url: http://localhost:5000/posts
+method: GET
+order: 3101827550254538
