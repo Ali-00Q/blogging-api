@@ -1,0 +1,18 @@
+$kind: http-request
+name: Update Post
+url: http://localhost:5000/posts/{{postId}}
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\": \"Updated title\",\r
+
+    \    \"content\": \"Updated content\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 7000

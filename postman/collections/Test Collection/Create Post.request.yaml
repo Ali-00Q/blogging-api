@@ -1,0 +1,24 @@
+$kind: http-request
+name: Create Post
+url: http://localhost:5000/posts
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\": \"My first post\",\r
+
+    \    \"content\": \"Hello world\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+scripts:
+  - type: afterResponse
+    code: "const response = pm.response.json();\r
+
+      pm.environment.set(\"postId\", response._id);"
+    language: text/javascript
+order: 6000
